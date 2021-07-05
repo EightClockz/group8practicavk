@@ -62,7 +62,7 @@ namespace vkapplication
                 Fields = VkNet.Enums.Filters.ProfileFields.All
             });
             foreach (User user in getFriends)
-                listBox1.Items.Add(Encoding.Default.GetString(Encoding.UTF8.GetBytes(user.FirstName)));
+                listBox1.Items.Add(Encoding.UTF8.GetString(Encoding.Default.GetBytes(user.FirstName + " " + user.LastName)));
 
 
             var get = api_user.Wall.Get(new WallGetParams());
@@ -90,7 +90,7 @@ namespace vkapplication
                 Fields = VkNet.Enums.Filters.UsersFields.FirstNameAbl
             });
             foreach (User user in getFollowers)
-                listBox1.Items.Add(Encoding.Default.GetString(Encoding.UTF8.GetBytes(user.FirstName)));
+                listBox1.Items.Add(Encoding.UTF8.GetString(Encoding.Default.GetBytes(user.FirstName + " " + user.LastName)));
         }
 
         
