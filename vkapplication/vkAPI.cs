@@ -44,18 +44,7 @@ namespace vkapplication
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            //var api_group = new VkApi();
-            //try
-            //{
-            //    api_group.Authorize(new ApiAuthParams
-            //    {
-            //        AccessToken = getAuthForGroup()
-            //    });
-            //}
-            //catch (Exception)
-            //{
-            //    MessageBox.Show("Error!");
-            //}
+          
             var api_user = new VkApi(); 
             try
             {
@@ -76,9 +65,33 @@ namespace vkapplication
                 listBox1.Items.Add(Encoding.UTF8.GetString(Encoding.Default.GetBytes(user.FirstName)));
 
 
-            //var get = api_user.Wall.Get(new WallGetParams());
-            //foreach (var wallPosts in get.WallPosts)
-            //    listBox2.Items.Add(Encoding.UTF8.GetString(Encoding.Default.GetBytes(wallPosts.Text)));
+            var get = api_user.Wall.Get(new WallGetParams());
+            foreach (var wallPosts in get.WallPosts)
+             listBox2.Items.Add(Encoding.UTF8.GetString(Encoding.Default.GetBytes(wallPosts.Text)));
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var api_group = new VkApi();
+            try
+            {
+                api_group.Authorize(new ApiAuthParams
+                {
+                    AccessToken = getAuthForGroup()
+                });
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error!");
+            }       
+            var getFollowers = api_group.Groups.GetMembers(new GroupsGetMembersParams()
+            {
+                GroupId = "203828239",
+                Fields = VkNet.Enums.Filters.UsersFields.FirstNameAbl
+            });
+            foreach (User user in getFollowers)
+                listBox1.Items.Add(user.FirstName);
+
         }
 
 
