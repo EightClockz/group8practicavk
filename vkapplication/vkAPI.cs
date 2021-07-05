@@ -32,7 +32,7 @@ namespace vkapplication
             {
                 MessageBox.Show("Error!");
             }
-            return textBox1.Text;
+            return textBox1.Text;          
         }
         private string getAuthForUser()
         {
@@ -62,12 +62,12 @@ namespace vkapplication
                 Fields = VkNet.Enums.Filters.ProfileFields.All
             });
             foreach (User user in getFriends)
-                listBox1.Items.Add(Encoding.UTF8.GetString(Encoding.Default.GetBytes(user.FirstName)));
+                listBox1.Items.Add(Encoding.Default.GetString(Encoding.UTF8.GetBytes(user.FirstName)));
 
 
             var get = api_user.Wall.Get(new WallGetParams());
             foreach (var wallPosts in get.WallPosts)
-             listBox2.Items.Add(Encoding.UTF8.GetString(Encoding.Default.GetBytes(wallPosts.Text)));
+             listBox2.Items.Add(Encoding.Default.GetString(Encoding.UTF8.GetBytes(wallPosts.Text)));
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -86,15 +86,14 @@ namespace vkapplication
             }       
             var getFollowers = api_group.Groups.GetMembers(new GroupsGetMembersParams()
             {
-                GroupId = "203828239",
+                GroupId = textBox3.Text,
                 Fields = VkNet.Enums.Filters.UsersFields.FirstNameAbl
             });
             foreach (User user in getFollowers)
-                listBox1.Items.Add(user.FirstName);
-
+                listBox1.Items.Add(Encoding.Default.GetString(Encoding.UTF8.GetBytes(user.FirstName)));
         }
 
-
+        
     }
         
 }
