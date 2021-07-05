@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace vkapplication
 {
-    public partial class Form1 : Form
+    public partial class vkAPI : Form
     {
-        public Form1()
+        public vkAPI()
         {
             InitializeComponent();
         }
