@@ -93,7 +93,26 @@ namespace vkapplication
                 listBox1.Items.Add(Encoding.UTF8.GetString(Encoding.Default.GetBytes(user.FirstName + " " + user.LastName)));
         }
 
-        
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var api_group = new VkApi();
+            try
+            {
+                api_group.Authorize(new ApiAuthParams
+                {
+                    AccessToken = getAuthForGroup()
+                });
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error!");
+            }
+            var post = api_group.Wall.Post(new WallPostParams
+            {
+               OwnerId = -1,
+               Message = "Privet pupsik"
+            });
+        }
     }
         
 }
