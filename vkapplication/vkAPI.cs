@@ -15,32 +15,16 @@ namespace vkapplication
 {
     public partial class vkAPI : Form
     {
-        public vkAPI()
+
+        string Usertoken1;
+        string Grouptoken1;
+        string GroupId1;
+        public vkAPI(string GroupToken, string UserToken, String GroupId)
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private string getAuthForGroup()
-        {
-            if (textBox1.Text == "")
-            {
-                MessageBox.Show("Error!");
-            }
-            return textBox1.Text;          
-        }
-        private string getAuthForUser()
-        {
-            if (textBox2.Text == "")
-            {
-                MessageBox.Show("Error!");
-            }
-            return textBox2.Text;
+            Usertoken1 = UserToken;
+            Grouptoken1 = GroupToken;
+            GroupId1 = GroupId;
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -50,8 +34,8 @@ namespace vkapplication
             {
                 api_user.Authorize(new ApiAuthParams
                 {
-                    AccessToken = getAuthForUser()
-                });
+                    AccessToken = Usertoken1
+                }); 
             }
             catch (Exception)
             {
@@ -77,7 +61,7 @@ namespace vkapplication
             {
                 api_group.Authorize(new ApiAuthParams
                 {
-                    AccessToken = getAuthForGroup()
+                    AccessToken = Grouptoken1
                 });
             }
             catch (Exception)
@@ -86,7 +70,7 @@ namespace vkapplication
             }       
             var getFollowers = api_group.Groups.GetMembers(new GroupsGetMembersParams()
             {
-                GroupId = textBox3.Text,
+                GroupId = GroupId1,
                 Fields = VkNet.Enums.Filters.UsersFields.FirstNameAbl
             });
             foreach (User user in getFollowers)
@@ -100,8 +84,8 @@ namespace vkapplication
             {
                 api_user.Authorize(new ApiAuthParams
                 {
-                    AccessToken = getAuthForUser()
-                });
+                    AccessToken = Usertoken1
+                });   
             }
             catch (Exception)
             {
@@ -123,6 +107,11 @@ namespace vkapplication
                 listBox1.Items.Add(s);
                 s = "";
             }
+        }
+
+        private void vkAPI_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Environment.Exit(1);
         }
     }
         

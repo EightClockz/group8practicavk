@@ -19,7 +19,12 @@ namespace vkapplication
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            string GroupToken = textBox2.Text;
+            string UserToken = textBox1.Text;
+            string GroupId = textBox3.Text;
+            vkAPI f2 = new vkAPI(GroupToken, UserToken, GroupId);
+            this.Hide();
+            f2.Show();
         }
     }
 }
