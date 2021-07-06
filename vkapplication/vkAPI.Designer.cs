@@ -38,11 +38,11 @@ namespace vkapplication
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(94, 142);
+            this.button1.Location = new System.Drawing.Point(51, 142);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(114, 23);
+            this.button1.Size = new System.Drawing.Size(174, 23);
             this.button1.TabIndex = 1;
-            this.button1.Text = "User";
+            this.button1.Text = "User friends and wall";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -66,22 +66,22 @@ namespace vkapplication
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(292, 142);
+            this.button2.Location = new System.Drawing.Point(287, 142);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(167, 23);
             this.button2.TabIndex = 6;
-            this.button2.Text = "Group";
+            this.button2.Text = "Group followers";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(189, 228);
+            this.button3.Location = new System.Drawing.Point(136, 196);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(94, 40);
+            this.button3.Size = new System.Drawing.Size(206, 40);
             this.button3.TabIndex = 9;
-            this.button3.Text = "Запись";
+            this.button3.Text = "User friends information";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
