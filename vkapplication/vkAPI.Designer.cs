@@ -39,20 +39,23 @@ namespace vkapplication
             this.label1 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(28, 152);
+            this.textBox1.Location = new System.Drawing.Point(32, 203);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(295, 23);
+            this.textBox1.Size = new System.Drawing.Size(337, 27);
             this.textBox1.TabIndex = 0;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(506, 40);
+            this.button1.Location = new System.Drawing.Point(578, 53);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(114, 23);
+            this.button1.Size = new System.Drawing.Size(130, 31);
             this.button1.TabIndex = 1;
             this.button1.Text = "User";
             this.button1.UseVisualStyleBackColor = true;
@@ -61,42 +64,46 @@ namespace vkapplication
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 15;
-            this.listBox1.Location = new System.Drawing.Point(476, 119);
+            this.listBox1.ItemHeight = 20;
+            this.listBox1.Location = new System.Drawing.Point(544, 159);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(536, 214);
+            this.listBox1.Size = new System.Drawing.Size(612, 284);
             this.listBox1.TabIndex = 3;
             // 
             // listBox2
             // 
             this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 15;
-            this.listBox2.Location = new System.Drawing.Point(1061, 119);
+            this.listBox2.ItemHeight = 20;
+            this.listBox2.Location = new System.Drawing.Point(1213, 159);
+            this.listBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(190, 214);
+            this.listBox2.Size = new System.Drawing.Size(217, 284);
             this.listBox2.TabIndex = 3;
             // 
             // User
             // 
             this.User.AutoSize = true;
-            this.User.Location = new System.Drawing.Point(41, 195);
+            this.User.Location = new System.Drawing.Point(47, 292);
             this.User.Name = "User";
-            this.User.Size = new System.Drawing.Size(30, 15);
+            this.User.Size = new System.Drawing.Size(85, 20);
             this.User.TabIndex = 4;
-            this.User.Text = "User";
+            this.User.Text = "User(token)";
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(28, 237);
+            this.textBox2.Location = new System.Drawing.Point(32, 316);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(295, 23);
+            this.textBox2.Size = new System.Drawing.Size(337, 27);
             this.textBox2.TabIndex = 5;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(714, 39);
+            this.button2.Location = new System.Drawing.Point(816, 52);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(86, 31);
             this.button2.TabIndex = 6;
             this.button2.Text = "Group";
             this.button2.UseVisualStyleBackColor = true;
@@ -105,35 +112,45 @@ namespace vkapplication
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(41, 134);
+            this.label1.Location = new System.Drawing.Point(47, 179);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 15);
+            this.label1.Size = new System.Drawing.Size(97, 20);
             this.label1.TabIndex = 7;
-            this.label1.Text = "Group";
+            this.label1.Text = "Group(token)";
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(355, 152);
+            this.textBox3.Location = new System.Drawing.Point(406, 203);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 23);
+            this.textBox3.Size = new System.Drawing.Size(114, 27);
             this.textBox3.TabIndex = 8;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(641, 407);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button3.Location = new System.Drawing.Point(733, 543);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(94, 40);
+            this.button3.Size = new System.Drawing.Size(107, 53);
             this.button3.TabIndex = 9;
             this.button3.Text = "Запись";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(456, 179);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(22, 20);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "id";
+            // 
             // vkAPI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1528, 498);
+            this.ClientSize = new System.Drawing.Size(1746, 664);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label1);
@@ -144,6 +161,7 @@ namespace vkapplication
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "vkAPI";
             this.Text = "vkAPI";
             this.ResumeLayout(false);
@@ -163,6 +181,7 @@ namespace vkapplication
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label2;
     }
 }
 
