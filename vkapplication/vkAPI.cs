@@ -95,23 +95,34 @@ namespace vkapplication
 
         private void button3_Click(object sender, EventArgs e)
         {
-            var api_group = new VkApi();
+            var api_user = new VkApi();
             try
             {
-                api_group.Authorize(new ApiAuthParams
+                api_user.Authorize(new ApiAuthParams
                 {
-                    AccessToken = getAuthForGroup()
+                    AccessToken = getAuthForUser()
                 });
             }
             catch (Exception)
             {
                 MessageBox.Show("Error!");
             }
-            var post = api_group.Wall.Post(new WallPostParams
+
+            var getFriends = api_user.Friends.Get(new VkNet.Model.RequestParams.FriendsGetParams
             {
-               OwnerId = -1,
-               Message = "Privet pupsik"
+                Fields = VkNet.Enums.Filters.ProfileFields.All
             });
+            string s = "";
+            foreach (User user in getFriends)
+            {
+                s += (Encoding.UTF8.GetString(Encoding.Default.GetBytes(user.FirstName + "   " + user.LastName + "   ")));
+                s += user.Sex + "   ";
+                s += user.Relation + "    ";
+                s += user.HasMobile + "   ";
+                s += user.BirthDate +"    ";
+                listBox1.Items.Add(s);
+                s = "";
+            }
         }
     }
         
