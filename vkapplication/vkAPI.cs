@@ -118,7 +118,7 @@ namespace vkapplication
                 s += (Encoding.UTF8.GetString(Encoding.Default.GetBytes(user.FirstName + "   " + user.LastName + "   ")));
                 s += user.Sex + "   ";
                 s += user.Relation + "    ";
-                s += user.HasMobile + "   ";
+                s += user.Status + "   ";
                 s += user.BirthDate +"    ";
                 listBox1.Items.Add(s);
                 s = "";
